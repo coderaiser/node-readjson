@@ -1,0 +1,24 @@
+{
+  "name": "readjson",
+  "version": "1.0.0",
+  "description": "Read file and parse it as json.",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/node-readjson/issues"
+  },
+  "main": "lib/readjson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/coderaiser/node-readjson.git"
+  },
+  "keywords": [
+    "github",
+    "release"
+  ],
+  "dependencies": {
+  }
+}
