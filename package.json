@@ -20,5 +20,6 @@
     "release"
   ],
   "dependencies": {
+    "try-catch": "~1.0.0"
   }
 }
