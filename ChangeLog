@@ -1,3 +1,9 @@
+2015.01.09, v1.0.2
+
+feature:
+- (readjson) get tryCatch error when occures
+
+
 2014.12.19, v1.0.1
 
 feature:
