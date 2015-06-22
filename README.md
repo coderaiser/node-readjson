@@ -20,6 +20,15 @@ readjson('./package.json', function(error, json) {
             json.name, json.version
         ].join(' '));
 });
+
+try {
+    readjson.sync('./package.json');
+} catch(error) {
+    console.log(error.message);
+}
+
+
+readjson.sync.try('./package.json');
 ```
 
 ## License
