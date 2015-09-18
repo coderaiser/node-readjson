@@ -16,8 +16,9 @@
     "url": "http://github.com/coderaiser/node-readjson.git"
   },
   "keywords": [
-    "github",
-    "release"
+    "read",
+    "parse",
+    "json"
   ],
   "dependencies": {
     "try-catch": "~1.0.0"
