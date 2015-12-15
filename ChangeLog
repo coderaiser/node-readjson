@@ -1,3 +1,10 @@
+2015.12.15, v1.1.2
+
+feature:
+- (readjson) add jshint, jscs
+- (readjson) add tests
+
+
 2015.09.18, v1.1.1
 
 feature:
