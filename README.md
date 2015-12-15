@@ -27,7 +27,6 @@ try {
     console.log(error.message);
 }
 
-
 readjson.sync.try('./package.json');
 ```
 
