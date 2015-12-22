@@ -14,6 +14,13 @@ test('readjson: should read json data from file', t => {
     });
 });
 
+test('readjson.sync.try: should read json data from file', t => {
+    let json = readjson.sync.try(NAME);
+    
+    t.equal(typeof json, 'object', 'json should be object');
+    t.end();
+});
+
 test('readjson: no args', t => {
     t.throws(readjson, /name should be string!/, 'NAME check');
     t.end();
