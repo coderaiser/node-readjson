@@ -15,7 +15,7 @@ test('readjson: should read json data from file', (t) => {
 });
 
 test('readjson: should read json data from file', (t) => {
-    readjson('hello', (error, json)  => {
+    readjson('hello', (error)  => {
         t.equal(error.code, 'ENOENT', 'should equal');
         t.end();
     });
