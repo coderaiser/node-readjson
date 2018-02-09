@@ -14,8 +14,15 @@ test('readjson: should read json data from file', (t) => {
     });
 });
 
+test('readjson: should read json data from file', (t) => {
+    readjson('hello', (error, json)  => {
+        t.equal(error.code, 'ENOENT', 'should equal');
+        t.end();
+    });
+});
+
 test('readjson.sync.try: should read json data from file', (t) => {
-    let json = readjson.sync.try(NAME);
+    const json = readjson.sync.try(NAME);
     
     t.equal(typeof json, 'object', 'json should be object');
     t.end();
