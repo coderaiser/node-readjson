@@ -9,9 +9,7 @@
   },
   "main": "lib/readjson.js",
   "scripts": {
-    "jscs": "jscs --esnext lib test",
-    "jshint": "jshint lib test",
-    "codestyle": "redrun jshint jscs",
+    "lint": "eslint lib test",
     "test": "tape test/*.js",
     "coverage": "nyc npm test",
     "report": "nyc report --reporter=text-lcov | coveralls"
@@ -30,8 +28,8 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "jscs": "^3.0.3",
-    "jshint": "^2.8.0",
+    "eslint": "^4.17.0",
+    "eslint-plugin-node": "^6.0.0",
     "nyc": "^11.0.2",
     "redrun": "^5.0.1",
     "tape": "^4.2.2"
