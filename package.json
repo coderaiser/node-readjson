@@ -24,7 +24,7 @@
     "json"
   ],
   "dependencies": {
-    "try-catch": "^2.0.0"
+    "try-catch": "^3.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
