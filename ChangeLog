@@ -1,3 +1,9 @@
+2020.02.29, v2.0.1
+
+fix:
+- (npmignore) dotfiles
+
+
 2020.02.29, v2.0.0
 
 feature:
