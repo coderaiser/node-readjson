@@ -1,24 +1,24 @@
 'use strict';
 
 const path = require('path');
-const test = require('tape');
+const test = require('supertape');
+const tryToCatch = require('try-to-catch');
 const readjson = require('..');
 
 const NAME = path.join(__dirname, '..', 'package.json');
 
-test('readjson: should read json data from file', (t) => {
-    readjson(NAME, (error, json)  => {
-        t.notOk(error, 'no read error');
-        t.equal(typeof json, 'object', 'json should be object');
-        t.end();
-    });
+test('readjson: should read json data from file', async (t) => {
+    const json = await readjson(NAME);
+    
+    t.equal(typeof json, 'object', 'json should be object');
+    t.end();
 });
 
-test('readjson: should read json data from file', (t) => {
-    readjson('hello', (error)  => {
-        t.equal(error.code, 'ENOENT', 'should equal');
-        t.end();
-    });
+test('readjson: should read json data from file', async (t) => {
+    const [error] = await tryToCatch(readjson, 'hello');
+    
+    t.equal(error.code, 'ENOENT', 'should equal');
+    t.end();
 });
 
 test('readjson.sync.try: should read json data from file', (t) => {
@@ -28,15 +28,10 @@ test('readjson.sync.try: should read json data from file', (t) => {
     t.end();
 });
 
-test('readjson: no args', (t) => {
-    t.throws(readjson, /name should be string!/, 'NAME check');
-    t.end();
-});
-
-test('readjson: no callback', (t) => {
-    let fn = () => readjson('hello', [1,2,3]);
+test('readjson: no args', async (t) => {
+    const [error] = await tryToCatch(readjson);
     
-    t.throws(fn, /callback should be function!/, 'callback check');
+    t.equal(error.message, 'name should be string!');
     t.end();
 });
 

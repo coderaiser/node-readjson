@@ -1,6 +1,6 @@
 {
   "name": "readjson",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "Read file and parse it as json.",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
   "license": "MIT",
@@ -9,10 +9,11 @@
   },
   "main": "lib/readjson.js",
   "scripts": {
-    "lint": "eslint lib test",
-    "test": "tape test/*.js",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,16 @@
     "coveralls": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-putout": "^3.2.1",
+    "madrun": "^5.4.4",
     "nyc": "^15.0.0",
+    "putout": "^7.14.1",
     "redrun": "^7.0.0",
-    "tape": "^4.2.2"
+    "supertape": "^1.2.4",
+    "tape": "^4.2.2",
+    "try-to-catch": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

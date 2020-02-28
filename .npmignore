@@ -2,3 +2,5 @@
 .jshintrc
 .travis.yml
 test
+.madrun.js
+
