@@ -1,5 +1,7 @@
 'use strict';
 
+const tryCatch = require('try-catch');
+
 const path = require('path');
 const test = require('supertape');
 const tryToCatch = require('try-to-catch');
@@ -36,12 +38,14 @@ test('readjson: no args', async (t) => {
 });
 
 test('readjson.sync: no args', (t) => {
-    t.throws(readjson.sync, /name should be string!/, 'NAME check');
+    const [error] = tryCatch(readjson.sync);
+    t.equal(error.message, 'name should be string!', 'NAME check');
     t.end();
 });
 
 test('readjson.sync.try: no args', (t) => {
-    t.throws(readjson.sync.try, /name should be string!/, 'NAME check');
+    const [error] = tryCatch(readjson.sync.try);
+    t.equal(error.message, 'name should be string!', 'NAME check');
     t.end();
 });
 
