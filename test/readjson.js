@@ -30,22 +30,30 @@ test('readjson.sync.try: should read json data from file', (t) => {
     t.end();
 });
 
+test('readjson: URL', async (t) => {
+    const url = new URL('file:///package.json');
+    const [error] = await tryToCatch(readjson, url);
+    
+    t.equal(error.message, `ENOENT: no such file or directory, open '/package.json'`);
+    t.end();
+});
+
 test('readjson: no args', async (t) => {
     const [error] = await tryToCatch(readjson);
     
-    t.equal(error.message, 'name should be string!');
+    t.equal(error.message, 'name should be string or instance of URL!');
     t.end();
 });
 
 test('readjson.sync: no args', (t) => {
     const [error] = tryCatch(readjson.sync);
-    t.equal(error.message, 'name should be string!', 'NAME check');
+    t.equal(error.message, 'name should be string or instance of URL!', 'NAME check');
     t.end();
 });
 
 test('readjson.sync.try: no args', (t) => {
     const [error] = tryCatch(readjson.sync.try);
-    t.equal(error.message, 'name should be string!', 'NAME check');
+    t.equal(error.message, 'name should be string or instance of URL!', 'NAME check');
     t.end();
 });
 
