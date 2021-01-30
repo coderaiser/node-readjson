@@ -1,6 +1,6 @@
 {
   "name": "readjson",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Read file and parse it as json.",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
   "license": "MIT",
