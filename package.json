@@ -40,7 +40,7 @@
     "eslint-plugin-putout": "^6.11.0",
     "madrun": "^8.1.0",
     "nyc": "^15.0.0",
-    "putout": "^12.7.0",
+    "putout": "^14.0.2",
     "supertape": "^3.10.0",
     "try-to-catch": "^3.0.0"
   },
