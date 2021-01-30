@@ -31,7 +31,8 @@
     "json"
   ],
   "dependencies": {
-    "jju": "^1.4.0"
+    "jju": "^1.4.0",
+    "try-catch": "^3.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
