@@ -22,6 +22,7 @@
   "keywords": [
     "read",
     "parse",
+    "promise",
     "json"
   ],
   "dependencies": {
