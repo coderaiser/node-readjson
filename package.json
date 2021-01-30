@@ -15,12 +15,6 @@
     "coverage": "madrun coverage",
     "report": "madrun report"
   },
-  "nyc": {
-    "exclude": [
-      ".madrun.js",
-      "test"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "http://github.com/coderaiser/node-readjson.git"
